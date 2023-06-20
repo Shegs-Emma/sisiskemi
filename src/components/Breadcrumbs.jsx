@@ -9,7 +9,7 @@ const Breadcrumbs = () => {
 
   return (
     <div className='mt-[30px]  px-5 mb-8 '>
-      <nav className='flex items-center space-x-2 text-sm text-gray-500'>
+      <nav className='flex items-center space-x-2 text-sm text-gray-500 md:justify-center'>
         {pagePaths.map((path, index) => (
           <Fragment key={path}>
             {index > 0 && <span className='text-gray-400'>{'>'}</span>}

@@ -21,7 +21,7 @@ const OrderSummary = () => {
         </div>
         <p className='font-semibold text-sm'>N89,000</p>
       </div>
-      <div className='bg-[#E0E0E0] px-5 pt-[18px] pb-14 h-full'>
+      <div className='bg-[#E0E0E0] md:bg-[#f2f2f2] px-5 pt-[18px] pb-14 h-full'>
         {/* Order List */}
         <div className='mb-10'>
           <div className='flex justify-between items-center'>
@@ -52,7 +52,7 @@ const OrderSummary = () => {
             placeholder='ENTER DISCOUNT CODE'
             className='w-full text-grey-input p-3 rounded-lg bg-transparent border border-[#BDBDBD] '
           />
-          <button className='bg-grey-input px-6 py-4.5 rounded-lg outline-none'>
+          <button className='bg-grey-input px-6 py-4.5 rounded-lg outline-none text-white'>
             Apply
           </button>
         </div>
