@@ -1,7 +1,12 @@
-import React from 'react';
+import CartLayout from '@/components/Cart/CartLayout';
+import PaymentContent from '@/components/CheckoutContent/PaymentContent';
 
 const Payment = () => {
-  return <div>Payment</div>;
+  return (
+    <CartLayout>
+      <PaymentContent />
+    </CartLayout>
+  );
 };
 
 export default Payment;
