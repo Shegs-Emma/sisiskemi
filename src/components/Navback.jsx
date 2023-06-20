@@ -21,9 +21,12 @@ const Navback = () => {
 
   return (
     <div className='text-gray-500 px-5 mb-[26px] mt-4'>
-      <button onClick={handleNavback} className='flex items-center gap-3.5'>
+      <button
+        onClick={handleNavback}
+        className='flex items-center gap-3.5 text-[#F2994A]'
+      >
         <BsChevronLeft />
-        Back to {previousPage}
+        {paths.length > 1 ? `Back to ${previousPage}` : 'Continue Shopping'}
       </button>
     </div>
   );
