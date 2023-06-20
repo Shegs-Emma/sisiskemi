@@ -1,7 +1,5 @@
-import React from 'react';
 import OrderSummary from './OrderSummary';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import ShippingMethod from './ShippingMethod';
 import ContactCard from './ContactCard';
 import PaymentMethod from './PaymentMethod';
 import BillingAddress from './BillingAddress';

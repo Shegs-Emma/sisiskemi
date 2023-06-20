@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SaveInfo = () => {
   return (
     <section className='px-5 pt-6' id='payment-method'>

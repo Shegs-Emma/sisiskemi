@@ -1,17 +1,10 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { BsChevronLeft } from 'react-icons/bs';
 
 const Navback = () => {
-  const [pageHistory, setPageHistory] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
 
-  //   useEffect(() => {
-  //     setPageHistory((prevHistory) => [...prevHistory, location.pathname]);
-  //   }, [location]);
   const paths = location.pathname.split('/').filter((path) => path !== '');
   let previousPage;
   if (paths.length > 1) {

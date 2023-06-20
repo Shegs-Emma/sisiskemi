@@ -1,4 +1,3 @@
-import React from 'react';
 import ShippingContent from '../components/CheckoutContent/ShippingContent';
 import CartLayout from '../components/Cart/CartLayout';
 

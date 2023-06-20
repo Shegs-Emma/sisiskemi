@@ -1,4 +1,3 @@
-import React from 'react';
 import OrderSummary from './OrderSummary';
 import Breadcrumbs from '../Breadcrumbs';
 import ContactCard from './ContactCard';
