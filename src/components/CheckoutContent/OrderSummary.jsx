@@ -19,17 +19,17 @@ const OrderSummary = () => {
             <FiChevronDown size={12} />
           </div>
         </div>
-        <p className='font-semibold'>N89,000</p>
+        <p className='font-semibold text-sm'>N89,000</p>
       </div>
-      <div className='bg-[#BDBDBD]'>
+      <div className='bg-[#BDBDBD] px-5 pt-[18px] pb-14'>
         {/* Order List */}
-        <div>
-          <div className='flex justify-between'>
+        <div className='mb-10'>
+          <div className='flex justify-between items-center'>
             <div className='flex gap-3 items-center'>
               {/* Badge and Image */}
               <div className='relative'>
                 {/* Badge */}
-                <div className='absolute inline px-[7px] rounded-full bg-[#4f4f4f] text-white'>
+                <div className='absolute inline px-[7px] rounded-full bg-grey-title text-white -right-2 -top-2'>
                   2
                 </div>
                 <div className='w-10 h-14'>
@@ -43,33 +43,35 @@ const OrderSummary = () => {
               </div>
             </div>
             {/* Amount */}
-            <div>N240,000</div>
+            <p className='text-grey-title font-semibold text-xs'>N240,000</p>
           </div>
         </div>
         {/* Apply Input */}
-        <div className='flex gap-3'>
+        <div className='flex gap-3 border-y border-grey-border py-5 mb-16'>
           <input
             placeholder='ENTER DISCOUNT CODE'
-            className='p-3 rounded-lg bg-transparent'
+            className='w-full text-grey-input p-3 rounded-lg bg-transparent border border-[#BDBDBD] '
           />
-          <button>Apply</button>
+          <button className='bg-grey-input px-6 py-4.5 rounded-lg'>
+            Apply
+          </button>
         </div>
-        <hr />
+        <hr className='border-[0.6px] border-grey-input mb-6 ' />
         <div>
-          <div>
+          <div className='flex justify-between mb-3 text-xs'>
             <p>Sub total </p>
-            <p>N720,000</p>
+            <p className=''>N720,000</p>
           </div>
-          <div>
-            <div>
-              <p>Shipping </p>
-              <AiOutlineQuestionCircle />
+          <div className='flex justify-between mb-5 text-xs'>
+            <div className='flex justify-between items-center gap-2'>
+              <p className=''>Shipping </p>
+              <AiOutlineQuestionCircle size={10} />
             </div>
             <p>N720,000</p>
           </div>
-          <div>
+          <div className='flex justify-between'>
             <p>Total </p>
-            <p>N720,000</p>
+            <p className='text-sm font-semibold'>N720,000</p>
           </div>
         </div>
       </div>

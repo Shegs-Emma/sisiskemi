@@ -15,6 +15,7 @@ export default {
           label: '#596080',
           light: '#758089',
           bg: '#F7F7F7',
+          border: '#C4C4C4',
         },
       },
     },
