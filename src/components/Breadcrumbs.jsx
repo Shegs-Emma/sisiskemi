@@ -1,34 +1,27 @@
-import { useLocation, Link } from 'react-router-dom';
+import { Fragment } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Breadcrumbs() {
+const Breadcrumbs = () => {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((path) => path !== '');
 
-  console.log(paths);
-
   return (
-    <nav aria-label='Breadcrumb'>
-      <ol className='breadcrumb'>
-        {paths?.length === 1 ? (
-          <li className='breadcrumb-item'>
-            <Link to='/'>Continue shopping</Link>
-          </li>
-        ) : (
-          <>
-            {paths.map((path, index) => (
-              <li className='breadcrumb-item' key={index}>
-                {index === paths.length - 1 ? (
-                  <span>{path}</span>
-                ) : (
-                  <Link to={`/${paths.slice(0, index + 1).join('/')}`}>
-                    {path}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </>
-        )}
-      </ol>
+    <nav className='flex items-center space-x-2 text-sm text-gray-500'>
+      {paths.map((path, index) => (
+        <Fragment key={path}>
+          {index > 0 && <span className='text-gray-400'>/</span>}
+          <Link
+            to={`/${paths.slice(0, index + 1).join('/')}`}
+            className={`${
+              index === paths.length - 1 ? 'font-semibold' : 'text-red-500'
+            }`}
+          >
+            {path}
+          </Link>
+        </Fragment>
+      ))}
     </nav>
   );
-}
+};
+
+export default Breadcrumbs;
