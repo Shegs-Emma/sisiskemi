@@ -4,11 +4,11 @@ import Aisha from '../../assets/images/aisha.svg';
 
 const OrderSummary = () => {
   return (
-    <div>
+    <div className='h-full md:-mt-16'>
       {/* Drop Down Toggler */}
-      <div className='flex justify-between items-center w-full px-5 py-4 bg-[#F2F2F2]'>
+      <div className='flex justify-between items-center w-full px-5 py-4 bg-[#F2F2F2] md:hidden'>
         <div
-          className='flex items-center text-[#A41E1E] gap-2.5
+          className='flex items-center text-[#A41E1E] gap-2.5 
 '
         >
           {/* Cart */}
@@ -21,7 +21,7 @@ const OrderSummary = () => {
         </div>
         <p className='font-semibold text-sm'>N89,000</p>
       </div>
-      <div className='bg-[#E0E0E0] px-5 pt-[18px] pb-14'>
+      <div className='bg-[#E0E0E0] px-5 pt-[18px] pb-14 h-full'>
         {/* Order List */}
         <div className='mb-10'>
           <div className='flex justify-between items-center'>
@@ -47,27 +47,29 @@ const OrderSummary = () => {
           </div>
         </div>
         {/* Apply Input */}
-        <div className='flex gap-3 border-y border-grey-border py-5 mb-16'>
+        <div className='flex gap-3 border-y border-grey-border py-5 mb-16 md:mb-0'>
           <input
             placeholder='ENTER DISCOUNT CODE'
             className='w-full text-grey-input p-3 rounded-lg bg-transparent border border-[#BDBDBD] '
           />
-          <button className='bg-grey-input px-6 py-4.5 rounded-lg'>
+          <button className='bg-grey-input px-6 py-4.5 rounded-lg outline-none'>
             Apply
           </button>
         </div>
-        <hr className='border-[0.6px] border-grey-input mb-6 ' />
+        <hr className='md:hidden border-[0.6px] border-grey-input mb-6 ' />
         <div>
-          <div className='flex justify-between mb-3 text-xs'>
-            <p>Sub total </p>
-            <p className=''>N720,000</p>
-          </div>
-          <div className='flex justify-between mb-5 text-xs'>
-            <div className='flex justify-between items-center gap-2'>
-              <p className=''>Shipping </p>
-              <AiOutlineQuestionCircle size={10} />
+          <div className=' md:border-y md:border-grey-border md:py-5 md:mb-5'>
+            <div className='flex justify-between mb-3 text-xs'>
+              <p>Sub total </p>
+              <p className=''>N720,000</p>
             </div>
-            <p>N720,000</p>
+            <div className='flex justify-between mb-5 text-xs md:mb-0'>
+              <div className='flex justify-between items-center gap-2'>
+                <p className=''>Shipping </p>
+                <AiOutlineQuestionCircle size={10} />
+              </div>
+              <p>N720,000</p>
+            </div>
           </div>
           <div className='flex justify-between'>
             <p>Total </p>

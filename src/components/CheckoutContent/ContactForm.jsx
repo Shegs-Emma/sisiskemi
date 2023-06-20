@@ -3,7 +3,7 @@ import InputBox from '../InputBox';
 
 const ContactForm = () => {
   return (
-    <section className='px-5'>
+    <section className='px-5 md:pb-32'>
       <div>
         <div className='mb-6'>
           <h2 className='font-semibold mb-2'>Contact Information</h2>
@@ -39,7 +39,7 @@ const ContactForm = () => {
           <InputBox placeholder='First Name' classname='basis-1/2 ' />
           <InputBox placeholder='Last Name' classname='basis-1/2 ' />
         </div>
-        <div className='flex flex-col gap-5 '>
+        <div className='flex flex-col gap-5 lg:flex-row'>
           <InputBox placeholder='Address' />
           <InputBox placeholder='Town/city' />
           <InputBox placeholder='Postal code' />
