@@ -1,11 +1,9 @@
-import { Field, ErrorMessage } from 'formik';
-
-const InputBox = () => {
+const InputBox = ({ placeholder, classname }) => {
   return (
-    <div>
-      {/* <Field type='password' name='password' />
-      <ErrorMessage name='password' component='div' /> */}
-    </div>
+    <input
+      placeholder={placeholder}
+      className={`${classname} text-xs px-4 py-5 border-[0.8px] border-grey-border rounded w-full outline-none`}
+    />
   );
 };
 

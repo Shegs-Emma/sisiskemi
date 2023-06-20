@@ -21,7 +21,7 @@ const OrderSummary = () => {
         </div>
         <p className='font-semibold text-sm'>N89,000</p>
       </div>
-      <div className='bg-[#BDBDBD] px-5 pt-[18px] pb-14'>
+      <div className='bg-[#E0E0E0] px-5 pt-[18px] pb-14'>
         {/* Order List */}
         <div className='mb-10'>
           <div className='flex justify-between items-center'>
