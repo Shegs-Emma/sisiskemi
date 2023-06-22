@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const ContactCard = () => {
   return (
-    <section className='px-5'>
+    <section className='px-5 md:px-7 lg:px-12 xl:px-16'>
       <div className='mb-6'>
         <h2 className='font-semibold mb-2'>Contact Information</h2>
         <div className=' flex gap-2'>

@@ -1,5 +1,4 @@
 import { Oval } from 'react-loader-spinner';
-import './style.css';
 
 const PageLoader = () => {
   return (

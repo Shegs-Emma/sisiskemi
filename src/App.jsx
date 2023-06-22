@@ -16,7 +16,7 @@ import Layout from './components/Layout';
 import PageNotFound from './pages/PageNotFound';
 import Shipping from './pages/Shipping';
 import Payment from './pages/Payment';
-import PageLoader from 'components/Loader/PageLoader';
+import PageLoader from '@/components/Loader/PageLoader';
 import { Suspense } from 'react';
 
 function App() {

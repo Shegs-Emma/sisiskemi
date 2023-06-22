@@ -22,6 +22,7 @@ const OrderSummary = () => {
   const showListHandler = () => {
     setShowList((current) => !current);
   };
+
   return (
     <div className='h-full md:-mt-16'>
       {/* Drop Down Toggler */}

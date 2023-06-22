@@ -19,7 +19,7 @@ const Navback = () => {
   };
 
   return (
-    <div className='text-gray-500 px-5 mb-[26px] mt-4'>
+    <div className='text-gray-500 px-5 mb-[26px] mt-4 md:px-7 lg:px-12 xl:px-16'>
       <button
         onClick={handleNavback}
         className='flex items-center gap-3.5 text-[#F2994A]'

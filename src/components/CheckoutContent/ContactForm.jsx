@@ -3,7 +3,10 @@ import InputBox from '../InputBox';
 
 const ContactForm = () => {
   return (
-    <section className='px-5 md:pb-32'>
+    <section
+      className='px-5 md:pb-32 md:px-7 lg:px-12 xl:px-16'
+      id='contact_form'
+    >
       <div>
         <div className='mb-6'>
           <h2 className='font-semibold mb-2'>Contact Information</h2>

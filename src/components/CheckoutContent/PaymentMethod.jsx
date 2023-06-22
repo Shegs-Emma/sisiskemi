@@ -1,6 +1,9 @@
 const PaymentMethod = () => {
   return (
-    <section className='px-5 pt-6' id='payment-method'>
+    <section
+      className='px-5 pt-6 md:px-7 lg:px-12 xl:px-16'
+      id='payment-method'
+    >
       <div className='mb-6'>
         <h2 className='font-semibold mb-2'>Payment method</h2>
         <p>All transactions are encrypted and secured</p>
