@@ -1,7 +1,6 @@
-import Styled from "styled-components"
-import { mobile } from "../responsive";
-import { Link } from "react-router-dom";
-
+import Styled from 'styled-components';
+import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 const Container = Styled.div`
     width:100vw;
@@ -23,7 +22,7 @@ const Wrapper = Styled.div`
     padding: 20px;
     background-color: #fff;
     ${mobile({
-        width: "75%"
+      width: '75%',
     })}
 
 `;
@@ -37,7 +36,6 @@ const Form = Styled.form`
         display: flex;
         flex-direction: column; 
 `;
-
 
 const Input = Styled.input`
     flex: 1;
@@ -65,22 +63,26 @@ const Links = Styled.a`
     cursor:pointer;    
 `;
 
-
 const Login = () => {
   return (
     <Container>
-        <Wrapper>
-            <Title>SIGN IN</Title>
-            <Form>                                
-                <Input placeholder="username" />                
-                <Input placeholder="password" />                                
-                <Button>LOGIN</Button>
-                <Links >Don't Remember your Password ? </Links>
-                <Link to="/register" style={{ color: 'black', textDecoration:"none" }}>Create a new Account </Link>
-            </Form>
-        </Wrapper>
+      <Wrapper>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input placeholder='username' />
+          <Input placeholder='password' />
+          <Button>LOGIN</Button>
+          <Links>{`Don't Remember your Password ?`} </Links>
+          <Link
+            to='/register'
+            style={{ color: 'black', textDecoration: 'none' }}
+          >
+            Create a new Account{' '}
+          </Link>
+        </Form>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

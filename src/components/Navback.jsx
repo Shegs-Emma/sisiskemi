@@ -4,7 +4,6 @@ import { BsChevronLeft } from 'react-icons/bs';
 const Navback = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
   const paths = location.pathname.split('/').filter((path) => path !== '');
   let previousPage;
   if (paths.length > 1) {
