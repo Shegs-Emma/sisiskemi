@@ -1,13 +1,26 @@
 import { AiOutlineShoppingCart, AiOutlineQuestionCircle } from 'react-icons/ai';
 import { FiChevronDown } from 'react-icons/fi';
 import Aisha from '../../assets/images/aisha.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const OrderSummary = () => {
-  const [showList, setShowList] = useState(true);
+  const [showList, setShowList] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowList(window.innerWidth >= 768);
+    };
+
+    // Set initial mobile state and add event listener
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const showListHandler = () => {
-    // setShowList((current) => !current);
+    setShowList((current) => !current);
   };
   return (
     <div className='h-full md:-mt-16'>
