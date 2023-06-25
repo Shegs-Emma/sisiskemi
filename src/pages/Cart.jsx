@@ -1,9 +1,9 @@
 import { Add, Remove } from '@mui/icons-material';
 import Styled from 'styled-components';
 import Announcement from '../components/Announcement';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import NavBarse from '../components/Navbar';
+// import Footer from '../components/Footer';
+// import Navbar from '../components/Navbar';
+// import NavBarse from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import { mobile } from '../responsive';
 import CartLayout from '../components/Cart/CartLayout';

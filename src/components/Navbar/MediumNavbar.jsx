@@ -4,11 +4,18 @@ import { BiSearch, BiChevronDown } from 'react-icons/bi';
 import { GrCart } from 'react-icons/gr';
 import { RxAvatar } from 'react-icons/rx';
 
-const Links = ['new in', 'shop', 'sale', 'rtw', 'collections', 'bridal'];
+const Links = [
+  { link: 'newin', label: 'new in' },
+  { link: 'shop', label: 'shop' },
+  { link: 'sale', label: 'sale' },
+  { link: 'rtw', label: 'rtw' },
+  { link: 'collections', label: 'collections' },
+  { link: 'bridal', label: 'bridal' },
+];
 
 const MediumNavbar = () => {
   return (
-    <div className=' bg-[#FAFAFA] border-b border-[#E0E0E0] pb-4'>
+    <div className=' bg-[#FAFAFA] border-b border-[#E0E0E0] pb-4 sticky top-0'>
       <div className='flex justify-between items-center  py-4 sm:px-8 md:px-16'>
         {/* Logo */}
         <div className='w-[70px] h-[40px]'>
@@ -17,9 +24,11 @@ const MediumNavbar = () => {
         {/* NavLinks */}
         <nav className='text-sm'>
           <ul className='flex justify-between items-center sm:gap-5 md:gap-8'>
-            {Links.map((item, index) => (
-              <li key={index}>
-                <NavLink className='uppercase font-medium'>{item}</NavLink>
+            {Links.map((item) => (
+              <li key={item.link}>
+                <NavLink className='uppercase font-medium' to={`/${item.link}`}>
+                  {item.label}
+                </NavLink>
               </li>
             ))}
           </ul>

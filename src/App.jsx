@@ -34,7 +34,7 @@ function App() {
               path='/cart/checkout/shipping/payment'
               element={<Payment />}
             />
-            <Route path='/collection' element={<Collection />} />
+            <Route path='/collections' element={<Collection />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/newin' element={<NewIn />} />

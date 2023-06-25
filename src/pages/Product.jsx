@@ -1,11 +1,10 @@
-import Styled from "styled-components"
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
+import Styled from 'styled-components';
+// import Announcement from "../components/Announcement";
+// import Footer from "../components/Footer";
 
-import NavBarse from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
-import { mobile } from "../responsive";
-
+// import NavBarse from "../components/Navbar";
+import Newsletter from '../components/Newsletter';
+import { mobile } from '../responsive';
 
 const Container = Styled.div`
 
@@ -15,7 +14,8 @@ const Wrapper = Styled.div`
     padding: 50px;
     display: flex;
     ${mobile({
-        padding: "10px", flexDirection:"column"
+      padding: '10px',
+      flexDirection: 'column',
     })}
 `;
 
@@ -28,7 +28,7 @@ const Image = Styled.img`
     height: 90vh;
     object-fit: contain;
     ${mobile({
-        height: "40vh"
+      height: '40vh',
     })}
 `;
 
@@ -36,7 +36,7 @@ const InfoContainer = Styled.div`
     flex:1;
     padding: 0px 50px;
     ${mobile({
-        padding: "10px"
+      padding: '10px',
     })}
 `;
 
@@ -59,7 +59,7 @@ const FilterContainer = Styled.div`
     display: flex;
     justify-content:space-between;
     ${mobile({
-        width: "100%"
+      width: '100%',
     })}
 
 `;
@@ -78,7 +78,7 @@ const FilterColor = Styled.div`
     width:20px;
     height:20px;
     border-radius: 50%;
-    background-color: ${props=>props.color};
+    background-color: ${(props) => props.color};
     margin: 0px 5px;
     cursor: pointer;
 `;
@@ -98,7 +98,7 @@ const AddContainer = Styled.div`
     align-items:center;
     justify-content: space-between;
     ${mobile({
-        width: "100%"
+      width: '100%',
     })}
 `;
 
@@ -109,8 +109,6 @@ const AmountContainer = Styled.div`
 `;
 
 const Remove = Styled.div``;
-
-
 
 const Amount = Styled.span`
     width: 30px;
@@ -126,7 +124,6 @@ const Amount = Styled.span`
 
 const Add = Styled.div``;
 
-
 const Button = Styled.button`
     padding: 15px;
     border: 2px solid teal;
@@ -141,59 +138,59 @@ const Button = Styled.button`
 `;
 
 // const FilterContainer = Styled.div`
-    
-// `;
 
+// `;
 
 const Product = () => {
   return (
     <Container>
-        <NavBarse/>        
+      {/* <NavBarse/>         */}
 
-            <Wrapper>
-                <ImageContainer>
-                    <Image src="https://res.cloudinary.com/kamisama/image/upload/v1679276229/IMG_9817_1_ddluhv.png" />
-                </ImageContainer>
-                <InfoContainer>
-                    <Title>Denim Jumpsuit</Title>
-                    <Desc>
-                        draft up a proposal and atttached to the pitch    deck
-                        INSTAGRAM STRUCTURE
-                        content structure: Days for posting, who is eviola, the metaverse, web 3.0, Virtual reality, Immersive experience and model, part of educatio in xr, 
-                    </Desc>
-                    <Price>$20</Price>
-                    <FilterContainer>
-                        <Filter>
-                            <FilterTitle>Color</FilterTitle>
-                            <FilterColor color="black" />
-                            <FilterColor color="darkblue"/>
-                            <FilterColor color="gray"/>
-                        </Filter>
-                        <Filter>
-                            <FilterTitle>Size</FilterTitle>
-                            <FilterSize>
-                                <FilterSizeOption>XS</FilterSizeOption>
-                                <FilterSizeOption>S</FilterSizeOption>
-                                <FilterSizeOption>M</FilterSizeOption>
-                                <FilterSizeOption>L</FilterSizeOption>
-                                <FilterSizeOption>XL</FilterSizeOption>                        
-                            </FilterSize>
-                        </Filter>                        
-                    </FilterContainer>
-                    <AddContainer>
-                        <AmountContainer>
-                            <Remove>-</Remove>
-                            <Amount>1</Amount>
-                            <Add>+</Add>
-                        </AmountContainer>
-                        <Button>Add To Cart</Button>
-                    </AddContainer>
-                </InfoContainer>
-            </Wrapper>
-        <Newsletter />
-        <Footer />
+      <Wrapper>
+        <ImageContainer>
+          <Image src='https://res.cloudinary.com/kamisama/image/upload/v1679276229/IMG_9817_1_ddluhv.png' />
+        </ImageContainer>
+        <InfoContainer>
+          <Title>Denim Jumpsuit</Title>
+          <Desc>
+            draft up a proposal and atttached to the pitch deck INSTAGRAM
+            STRUCTURE content structure: Days for posting, who is eviola, the
+            metaverse, web 3.0, Virtual reality, Immersive experience and model,
+            part of educatio in xr,
+          </Desc>
+          <Price>$20</Price>
+          <FilterContainer>
+            <Filter>
+              <FilterTitle>Color</FilterTitle>
+              <FilterColor color='black' />
+              <FilterColor color='darkblue' />
+              <FilterColor color='gray' />
+            </Filter>
+            <Filter>
+              <FilterTitle>Size</FilterTitle>
+              <FilterSize>
+                <FilterSizeOption>XS</FilterSizeOption>
+                <FilterSizeOption>S</FilterSizeOption>
+                <FilterSizeOption>M</FilterSizeOption>
+                <FilterSizeOption>L</FilterSizeOption>
+                <FilterSizeOption>XL</FilterSizeOption>
+              </FilterSize>
+            </Filter>
+          </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove>-</Remove>
+              <Amount>1</Amount>
+              <Add>+</Add>
+            </AmountContainer>
+            <Button>Add To Cart</Button>
+          </AddContainer>
+        </InfoContainer>
+      </Wrapper>
+      <Newsletter />
+      {/* <Footer /> */}
     </Container>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
