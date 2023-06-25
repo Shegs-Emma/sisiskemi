@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Logo from '@/assets/images/logo.svg';
 import { Link, useLocation } from 'react-router-dom';
 
 const pagePaths = ['Cart', 'Information', 'Shipping', 'Payment'];
@@ -9,6 +10,9 @@ const Breadcrumbs = () => {
 
   return (
     <div className='mt-[30px] px-5 mb-8'>
+      <div className='hidden md:block md:w-20 md:h-12 mb-4'>
+        <img src={Logo} alt='logo' />
+      </div>
       <nav className='flex items-center space-x-2 text-sm text-gray-500 md:justify-center sm:text-base'>
         {pagePaths.map((path, index) => (
           <Fragment key={path}>

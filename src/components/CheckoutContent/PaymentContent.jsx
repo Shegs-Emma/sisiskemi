@@ -8,7 +8,6 @@ import SaveInfo from './SaveInfo';
 const PaymentContent = () => {
   return (
     <div>
-      {' '}
       <div className='md:flex flex-row-reverse w-full'>
         <div className='md:basis-[45%] md:bg-[#f2f2f2] md:flex md:flex-col justify-between'>
           <OrderSummary />

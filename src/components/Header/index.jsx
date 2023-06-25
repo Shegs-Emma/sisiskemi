@@ -1,6 +1,5 @@
-import React from 'react';
+import Navbar from '@/components/Navbar/index';
 import Announcement from './Announcement';
-import Navbar from './Navbar';
 
 const Header = () => {
   return (

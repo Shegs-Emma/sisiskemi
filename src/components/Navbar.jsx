@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { styled } from 'styled-components';
 import LogoImg from '../images/logo.svg';
 import { BsPerson } from 'react-icons/bs';
@@ -154,7 +154,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Announcement />
+      {/* <Announcement /> */}
       <Nav state={isNavOpen ? 1 : 0}>
         <div className='brand'>
           <img src={LogoImg} alt='' />
