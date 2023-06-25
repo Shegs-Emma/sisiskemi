@@ -4,6 +4,8 @@ import { BiSearch, BiChevronDown } from 'react-icons/bi';
 import { GrCart } from 'react-icons/gr';
 import { RxAvatar } from 'react-icons/rx';
 
+const Links = ['new in', 'shop', 'sale', 'rtw', 'collections', 'bridal'];
+
 const DesktopNavbar = () => {
   return (
     <div className='flex justify-between items-center  py-4 px-9 xl:px-[70px] bg-[#FAFAFA] border-b border-[#E0E0E0]'>
@@ -14,24 +16,11 @@ const DesktopNavbar = () => {
       {/* NavLinks */}
       <nav className='text-sm'>
         <ul className='flex justify-between items-center gap-8'>
-          <li>
-            <NavLink>NEW IN</NavLink>
-          </li>
-          <li>
-            <NavLink>SHOP</NavLink>
-          </li>
-          <li>
-            <NavLink>SALE</NavLink>
-          </li>
-          <li>
-            <NavLink>RTW</NavLink>
-          </li>
-          <li>
-            <NavLink>COLLECTIONS</NavLink>
-          </li>
-          <li>
-            <NavLink>BRIDAL</NavLink>
-          </li>
+          {Links.map((item, index) => (
+            <li key={index}>
+              <NavLink className='uppercase font-medium'>{item}</NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
       {/* User Links */}

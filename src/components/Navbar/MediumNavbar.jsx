@@ -4,9 +4,11 @@ import { BiSearch, BiChevronDown } from 'react-icons/bi';
 import { GrCart } from 'react-icons/gr';
 import { RxAvatar } from 'react-icons/rx';
 
+const Links = ['new in', 'shop', 'sale', 'rtw', 'collections', 'bridal'];
+
 const MediumNavbar = () => {
   return (
-    <div>
+    <div className=' bg-[#FAFAFA] border-b border-[#E0E0E0] pb-4'>
       <div className='flex justify-between items-center  py-4 sm:px-8 md:px-16'>
         {/* Logo */}
         <div className='w-[70px] h-[40px]'>
@@ -15,24 +17,11 @@ const MediumNavbar = () => {
         {/* NavLinks */}
         <nav className='text-sm'>
           <ul className='flex justify-between items-center sm:gap-5 md:gap-8'>
-            <li>
-              <NavLink>NEW IN</NavLink>
-            </li>
-            <li>
-              <NavLink>SHOP</NavLink>
-            </li>
-            <li>
-              <NavLink>SALE</NavLink>
-            </li>
-            <li>
-              <NavLink>RTW</NavLink>
-            </li>
-            <li>
-              <NavLink>COLLECTIONS</NavLink>
-            </li>
-            <li>
-              <NavLink>BRIDAL</NavLink>
-            </li>
+            {Links.map((item, index) => (
+              <li key={index}>
+                <NavLink className='uppercase font-medium'>{item}</NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
@@ -42,15 +31,15 @@ const MediumNavbar = () => {
         <div className='flex justify-between items-center'>
           <span>NGN N</span>
           <span>
-            <BiChevronDown />
+            <BiChevronDown size={18} />
           </span>
         </div>
         {/* Profile */}
-        <RxAvatar />
+        <RxAvatar size={20} />
         {/* Search */}
-        <BiSearch />
+        <BiSearch size={20} />
         {/* Cart */}
-        <GrCart />
+        <GrCart size={20} />
       </div>
     </div>
   );

@@ -6,13 +6,14 @@ import Logo from '@/assets/images/logo.svg';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+const Links = ['new in', 'shop', 'sale', 'rtw', 'collections', 'bridal'];
+
 const MobileNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  console.log(showMenu);
 
   return (
     <div className='relative'>
-      <div className='flex justify-between items-center px-4 py-2'>
+      <div className='flex justify-between items-center px-4 py-2  bg-[#FAFAFA] border-b border-[#E0E0E0]'>
         {/* Hamburger */}
         <button className='outline-none' onClick={() => setShowMenu(true)}>
           <FiMenu size={24} />
@@ -44,36 +45,15 @@ const MobileNavbar = () => {
           <div>
             <nav>
               <ul className='flex flex-col gap-8 w-full'>
-                <li className='w-full'>
-                  <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block'>
-                    NEW IN
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block'>
-                    SHOP
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block'>
-                    SALE
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block'>
-                    RTW
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block'>
-                    COLLECTIONS
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block'>
-                    BRIDAL
-                  </NavLink>
-                </li>
+                {Links.map((item, index) => (
+                  <>
+                    <li key={index}>
+                      <NavLink className='py-2.5 border-b-[0.8px] border-[#C4C4C4] block uppercase'>
+                        {item}
+                      </NavLink>
+                    </li>
+                  </>
+                ))}
                 <div className='mt-2 flex flex-col gap-6'>
                   <li>
                     <NavLink className='text-white py-3 bg-primary rounded-[4px] block text-center'>

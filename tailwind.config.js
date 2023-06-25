@@ -18,6 +18,10 @@ export default {
           border: '#C4C4C4',
         },
       },
+      screens: {
+        xs: '480px',
+        xxl: '1440px',
+      },
     },
   },
   plugins: [],
