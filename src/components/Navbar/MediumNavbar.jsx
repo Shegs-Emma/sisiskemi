@@ -2,7 +2,7 @@ import Logo from '@/assets/images/logo.svg';
 import { NavLink } from 'react-router-dom';
 import { BiSearch, BiChevronDown } from 'react-icons/bi';
 import { GrCart } from 'react-icons/gr';
-import { RxAvatar } from 'react-icons/rx';
+import { BsPersonCircle } from 'react-icons/bs';
 
 const Links = [
   { link: 'newin', label: 'new in' },
@@ -44,7 +44,7 @@ const MediumNavbar = () => {
           </span>
         </div>
         {/* Profile */}
-        <RxAvatar size={20} />
+        <BsPersonCircle size={20} />
         {/* Search */}
         <BiSearch size={20} />
         {/* Cart */}
