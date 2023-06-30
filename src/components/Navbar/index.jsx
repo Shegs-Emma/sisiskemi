@@ -5,13 +5,13 @@ import MobileNavbar from './MobileNavbar';
 const Navbar = () => {
   return (
     <div>
-      <div className='sm:hidden'>
+      <div className='relative sm:hidden'>
         <MobileNavbar />
       </div>
-      <div className='hidden sm:block lg:hidden'>
+      <div className='relative hidden sm:block lg:hidden'>
         <MediumNavbar />
       </div>
-      <div className='hidden lg:block'>
+      <div className='relative hidden lg:block'>
         <DesktopNavbar />
       </div>
     </div>
